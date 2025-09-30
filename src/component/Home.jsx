@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const Home = () => {
     const navigate = useNavigate();
   return (
-    <div className='flex items-center mt-20 sm:mt-40 justify-center flex-col gap-10'>
+    <div className='flex items-center mt-27 sm:mt-40 justify-center flex-col gap-10'>
         <motion.div initial={{opacity: 0, y: -500}} animate={{opacity: 1, y: 0}} transition={{duration: 2}} className="">
             <h1 className='text-emerald-600 text-3xl font-bold'>Hello developer</h1>
         </motion.div>
