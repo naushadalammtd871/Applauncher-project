@@ -60,7 +60,7 @@ const Weather = () => {
   return (
     <motion.div initial={{opacity:0}} animate={{opacity: 1}} transition={{duration: 4}}>
         <div className='sm:mt-5 mt-12 bg-[#500ea4] py-5 flex-col mx-auto w-full sm:w-2/3 flex items-center'>
-            <div className="flex items-center py-5 px-10 gap-5 w-full justify-center">
+            <div className="flex items-center py-5 px-5 gap-5 w-full justify-center">
                 <input ref={inputRef} className='py-2 pl-5 bg-[#fff] w-full outline-[#500ea4] text-[#333333] rounded-full font-bold' type="text" placeholder='Search'/>
                 <img onClick={() => search(inputRef.current.value)} className='bg-[#fff] py-2 px-3 rounded-full' src="/Assets/search.png" alt="" />
             
@@ -69,13 +69,13 @@ const Weather = () => {
             {
                 weatherData ? <>
 
-                    <div className="flex flex-col gap-6 sm:gap-10">
+                    <div className="flex flex-col gap-7 sm:gap-10">
                         <img className='w-30 sm:w-40' src={weatherData.icon} alt="" />
                         <p className='sm:text-5xl text-2xl font-extrabold text-center text-[#ffffffe3]'>{weatherData.tempreature}°C</p>
                         <p className='sm:text-5xl text-2xl text-center font-bold text-[#ffffffe5]'>{weatherData.location}</p>
                     </div>
 
-                    <div className="flex mt-12 sm:mt-20 w-full px-10 items-center justify-between">
+                    <div className="flex mt-13 sm:mt-20 w-full px-10 items-center justify-between">
                         <div className="flex items-center gap-5">
                             <img className='w-6' src="/Assets/humidity.png" alt="" />
                             <div className="">
