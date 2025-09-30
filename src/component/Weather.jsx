@@ -38,7 +38,8 @@ const Weather = () => {
                 tempreature: Math.floor(data.main.temp),
                 location: data.name,
                 windSpeed: data.wind.speed,
-                icon: icon
+                icon: icon,
+                description: data.weather[0].description
             })
             
         } catch (error) {
@@ -68,6 +69,7 @@ const Weather = () => {
                     <div className="flex flex-col gap-7 sm:gap-10">
                         <img className='w-30 sm:w-40' src={weatherData.icon} alt="" />
                         <p className='sm:text-5xl text-2xl font-extrabold text-center text-[#ffffffe3]'>{weatherData.tempreature}°C</p>
+                        <p className='sm:text-3xl text-xl font-extrabold text-center text-[#ffffffe3]'>{weatherData.description}</p>
                         <p className='sm:text-5xl text-2xl text-center font-bold text-[#ffffffe5]'>{weatherData.location}</p>
                     </div>
 
