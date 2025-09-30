@@ -11,14 +11,6 @@ const Weather = () => {
             return null
         }
 
-        const allIcons = {
-            "clear": "/Assets/clear.png",
-            "cloud": "/Assets/cloud.png",
-            "drizzele": "/Assets/drizzle.png",
-            "rain": "/Assets/rain.png",
-            "snow": "/Assets/snow.png",
-        }
-
         
         try {
 
@@ -27,11 +19,11 @@ const Weather = () => {
             const data = await response.json();
             console.log(data)
 
-            const icon = allIcons[data.weather[0].main] == "Clouds" ? cloud : "";
-            const icon = allIcons[data.weather[0].main] == "Rain" ? rain : "";
-            const icon = allIcons[data.weather[0].main] == "Drizzle" ? drizzele : "";
-            const icon = allIcons[data.weather[0].main] == "Snow" ? Snow: "";
-            const icon = allIcons[data.weather[0].main] == "Clear" ? clear: "";
+            const icon = {data.weather[0].main == "Clouds" ? "/Assets/cloud.png" : /Assets/clear.png}
+            const icon = {data.weather[0].main == "Clear" ? "/Assets/clear.png" : /Assets/clear.png}
+            const icon = {data.weather[0].main == "Rain" ? "/Assets/rain.png" : /Assets/clear.png}
+            const icon = {data.weather[0].main == "Snow" ? "/Assets/snow.png" : /Assets/clear.png}
+            const icon = {data.weather[0].main == "Drizzle" ? "/Assets/drizzle.png" : /Assets/clear.png}
 
             setweatherData({
                 humidity: data.main.humidity,
