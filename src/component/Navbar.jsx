@@ -4,7 +4,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-reac
 
 const Navbar = () => {
   return (
-    <div className='flex items-center justify-between py-3 border-b border-b-[#ffffff9c]'>
+    <div className='flex items-center px-3 sm:px-0 justify-between py-3 border-b border-b-[#ffffff9c]'>
         <div className="">
             <h1 className='text-2xl font-bold text-[#fffc]'>weather</h1>
         </div>
