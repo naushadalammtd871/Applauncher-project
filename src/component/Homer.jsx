@@ -32,7 +32,7 @@ const Homer = () => {
 
 
   return (
-    <div className='flex flex-col items-center justify-center sm:mt-20 mt-8 gap-6'>
+    <div className='flex flex-col items-center justify-center sm:mt-20 mt-12 gap-6'>
         <div className="h-[120px] w-[120px] rounded-full">
             <img className='hfull w-full object-cover' src="/Assets/cloud.png" alt="" />
         </div>
@@ -45,7 +45,7 @@ const Homer = () => {
         <div className="flex items-center justify-center">
             <p className='sm:text-xl text-sm w-full sm:w-3/4 text-center font-bold text-[#ffffffc0]'>Hello, <span className='text-emerald-600'>{user.firstName}</span> you can check your daily today weather free of const, offer provided for 1 month please dont miss you can check and very functionality provided explore this and, give me rating, if your daily check weather of nearest area and locality area.</p>
         </div>
-        <div className="sm:mt-5">
+        <div className="sm:mt-5 mt-7">
             <motion.button onClick={() => navigate("/label2")} initial={{opacity: 0, x: 500}} animate={{opacity: 1, x: 0}} transition={{duration: 2}} className='text-xl font-bold text-[#333333] bg-emerald-600 py-[10px] px-[30px] rounded-full'>Explore</motion.button>
         </div>
     </div>
