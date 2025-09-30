@@ -30,7 +30,7 @@ const Weather = () => {
         
         try {
 
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${'65dfa591eec921fba0e4d3c07cc39cf7'}`
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${'65dfa591eec921fba0e4d3c07cc39cf7'}`
             const response = await fetch(url);
             const data = await response.json();
             console.log(data)
