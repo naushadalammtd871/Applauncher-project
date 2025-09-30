@@ -12,19 +12,11 @@ const Weather = () => {
         }
 
         const allIcons = {
-            "01d": "/Assets/clear.png",
-            "01n": "/Assets/clear.png",
-            "02d": "/Assets/cloud.png",
-            "02n": "/Assets/cloud.png",
-            "03d": "/Assets/cloud.png",
-            "03n": "/Assets/cloud.png",
-            "04d": "/Assets/drizzle.png",
-            "09d": "/Assets/drizzle.png",
-            "09n": "/Assets/rain.png",
-            "10d": "/Assets/snow.png",
-            "10n": "/Assets/rain.png",
-            "13d": "/Assets/snow.png",
-            "13n": "/Assets/rain.png",
+            "clear": "/Assets/clear.png",
+            "cloud": "/Assets/cloud.png",
+            "drizzele": "/Assets/drizzle.png",
+            "rain": "/Assets/rain.png",
+            "snow": "/Assets/snow.png",
         }
 
         
@@ -35,7 +27,11 @@ const Weather = () => {
             const data = await response.json();
             console.log(data)
 
-            const icon = allIcons[data.weather[0].icon] || "/Assets/clear.png"
+            const icon = allIcons[data.weather[0].main] == "Clouds" ? cloud : "";
+            const icon = allIcons[data.weather[0].main] == "Rain" ? rain : "";
+            const icon = allIcons[data.weather[0].main] == "Drizzle" ? drizzele : "";
+            const icon = allIcons[data.weather[0].main] == "Snow" ? Snow: "";
+            const icon = allIcons[data.weather[0].main] == "Clear" ? clear: "";
 
             setweatherData({
                 humidity: data.main.humidity,
